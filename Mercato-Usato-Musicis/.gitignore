@@ -1,0 +1,8 @@
+node_modules/
+.env
+data/
+uploads/*
+!uploads/.gitkeep
+test-results/
+*.log
+__pycache__/

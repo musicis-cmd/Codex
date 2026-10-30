@@ -1,0 +1,23 @@
+[Unit]
+Description=Mercato Usato Musicis
+After=network.target
+
+[Service]
+Type=simple
+# Adattare utente, percorsi e posizione del binario Node all'hosting.
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/musicis/mercato-usato
+EnvironmentFile=/etc/musicis-usato.env
+ExecStart=/usr/bin/node server.mjs
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/musicis-usato
+
+[Install]
+WantedBy=multi-user.target

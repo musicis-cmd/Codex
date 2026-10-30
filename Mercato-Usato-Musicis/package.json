@@ -1,0 +1,21 @@
+{
+  "name": "mercato-usato-musicis",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mercato usato Musicis: sito HTML e servizio per annunci, foto e moderazione.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "dev": "node --env-file-if-exists=.env --watch server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "helmet": "8.1.0",
+    "multer": "2.5.0",
+    "sharp": "0.35.5"
+  }
+}
